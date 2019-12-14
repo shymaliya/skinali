@@ -21,6 +21,8 @@ img
     background-color: #fff
     +bold
     text-decoration: none
+    &:hover
+        cursor: pointer
 .button
     border: none
     text-transform: uppercase
@@ -29,6 +31,8 @@ img
     color:#fff
     +bold
     text-decoration: none
+    &:hover
+        cursor: pointer
     &-fitting
         color: $primary
         background-color: #fff
@@ -65,8 +69,10 @@ input[type="checkbox"]
             margin-right: 20px
                     
 @media (max-width: 576px)
-    .button-o
+    .button
         font-size: 10px
+        &-o 
+            font-size: 10px
     .section
         padding: 60px 0
         &-title
