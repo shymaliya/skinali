@@ -351,12 +351,20 @@ input[type="checkbox"]:checked + label::before {
 }
 
 .offer-block {
-  background: #fff url(../img/offer/form-bg.png) no-repeat center right;
-  background-size: contain;
   padding: 80px;
   margin-top: -200px;
   -webkit-box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
           box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+.offer-block__calc-bg {
+  background: #fff url(../img/offer/form-bg-calc.png) no-repeat center right;
+  background-size: contain;
+}
+
+.offer-block__price-bg {
+  background: #fff url(../img/offer/form-bg-price.png) no-repeat center right;
+  background-size: contain;
 }
 
 .offer__title {
@@ -370,6 +378,7 @@ input[type="checkbox"]:checked + label::before {
   display: block;
   font-size: 21px;
   margin-bottom: 48px;
+  max-width: 835px;
 }
 
 .form__row {
@@ -380,7 +389,7 @@ input[type="checkbox"]:checked + label::before {
       -ms-flex-align: center;
           align-items: center;
   max-width: 900px;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 .form__row:last-child {
@@ -412,18 +421,29 @@ input[type="checkbox"]:checked + label::before {
   width: 100%;
 }
 
+.form__policy {
+  display: inline-block;
+  max-width: 352px;
+  margin-left: 45px;
+  font-size: 16px;
+  color: #596164;
+}
+
 @media (max-width: 1199px) {
   .offer-block {
     background-position: center right -112px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .offer-block {
     background: none;
     background-color: #fff;
     padding: 40px;
   }
+}
+
+@media (max-width: 768px) {
   .offer__title {
     font-size: 18px;
   }
@@ -449,6 +469,10 @@ input[type="checkbox"]:checked + label::before {
   }
   .form__input {
     margin-bottom: 20px;
+  }
+  .form__policy {
+    margin-left: 0;
+    margin-top: 30px;
   }
 }
 
@@ -753,6 +777,10 @@ input[type="checkbox"]:checked + label::before {
   margin-bottom: 30px;
 }
 
+.steps {
+  background-color: #f5f6f8;
+}
+
 .steps-block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -777,5 +805,54 @@ input[type="checkbox"]:checked + label::before {
   .step {
     width: 100%;
   }
+}
+
+.reviews {
+  background-color: #f5f6f8;
+}
+
+.reviews-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.reviews-slider__item {
+  text-align: center;
+}
+
+.reviews-slider__image {
+  display: block;
+  width: 70px;
+  height: 70px;
+  border: 2px solid #6a99e9;
+  border-radius: 60%;
+  margin: 20px auto;
+}
+
+.reviews-slider__text {
+  position: relative;
+  font-size: 15px;
+  font-style: italic;
+  max-width: 370px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.reviews-slider__text::after {
+  position: absolute;
+  content: '';
+  bottom: -30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 10px;
+  border: 10px solid transparent;
+  border-top: 10px solid #fff;
 }
 /*# sourceMappingURL=style.css.map */
