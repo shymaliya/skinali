@@ -7,6 +7,7 @@
     <title>Фабрика скинали</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/twentytwenty.css">
 
 </head>
 <body>
@@ -16,7 +17,7 @@
         <div class="container">
             <nav class="menu__nav">
                 <a href="#" class="menu__link">Главная</a>
-                <a href="#" class="menu__link">Продукция</a>
+                <a href="#features" class="menu__link">Преимущества</a>
                 <a href="#" class="menu__link">Каталог</a>
                 <a href="#" class="menu__link">Примеры работ</a>
                 <a href="#" class="menu__link">Примерка изображений</a>
@@ -46,7 +47,7 @@
                     <a class="navbar__phone" href="tel:+79121234567">+7 499 123-45-67</a>
                     <a class="navbar__email navbar__small-text" href="mailto:info@mail.cu">info@mail.cu</a>
                 </div>
-                <button class="button-o navbar__button">Получить консультацию</button> 
+                <a href="#offer" class="button-o navbar__button">Получить консультацию</a> 
             </div>
         </div>
         <!-- /.container -->    
@@ -58,7 +59,7 @@
                 Гарантия <br> минимальной цены <br> на скинали
             </h1>
             <span class="hero__subtitle">от 3 000 р/м2</span>
-            <button class="button hero__button">Заказать скинали</button>
+            <a href="#offer" class="button hero__button">Заказать скинали</a>
         </div>
     </div>
     <!-- /.hero -->
@@ -66,7 +67,7 @@
 <!-- /.header -->
 
 <main>
-    <section class="offer bg-secondary">
+    <section class="offer bg-secondary" id="offer">
         <div class="container">
             <div class="offer__block offer-block offer-block__calc-bg">
                 <h2 class="offer__title">Оставьте заявку на расчет</h2>
@@ -75,15 +76,22 @@
                     <div class="form__row">
                         <div class="form__group">
                             <label for="" class="form__label">Вид стекла</label>
-                            <input type="text" class="input form__input">
+                            <input type="hidden" name="type" id="select-type" value="С печатью">
+                            <div class="select form__select">
+                                <div class="select_checked">С печатью</div>
+                                <ul class="select__dropdown">
+                                    <li class="select__option" data-value="С печатью">С печатью</li class="select__option">
+                                    <li class="select__option" data-value="Без печати">Без печати</li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="form__group">
                             <label for="" class="form__label">Ширина, см</label>
-                            <input type="text" class="input form__input">
+                            <input type="number" class="input form__input">
                         </div>
                         <div class="form__group">
                             <label for="" class="form__label">Высота, см</label>
-                            <input type="text" class="input form__input">
+                            <input type="number" class="input form__input">
                         </div>
                     </div>
                     <div class="form__row form__row-checkbox">
@@ -118,7 +126,7 @@
     </section>
     <!-- /.offer -->
 
-    <section class="features section">
+    <section class="features section" id="features">
         <div class="container">
             <h2 class="section-title section__title">Наши преимущества</h2>
             <div class="features-block">
@@ -404,6 +412,42 @@
         </div>
     </section>
 
+    <section class="section before">
+        <div class="container">
+            <h2 class="section-title section__title">До и после</h2>
+            <div class="before-slider-wrap">
+                <div class="before-slider">
+                    <div class="before-slider__item">
+                        <div class="before-after">
+                            <img src="img/before-slider/sample-before.png" alt="">
+                            <img src="img/before-slider/sample-after.png" alt="">
+                        </div>
+                    </div>
+                    <div class="before-slider__item">
+                        <div class="before-after">
+                            <img src="img/before-slider/sample-before.png" alt="">
+                            <img src="img/before-slider/sample-after.png" alt="">
+                        </div>
+                    </div>
+                    <div class="before-slider__item">
+                        <div class="before-after">
+                            <img src="img/before-slider/sample-before.png" alt="">
+                            <img src="img/before-slider/sample-after.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="before-slider-arrows">
+                    <button class="arrow arrow-left">
+                        <img src="img/before-slider/left.png" alt="">
+                    </button>
+                    <button class="arrow arrow-right">
+                        <img src="img/before-slider/right.png" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="section reviews">
         <div class="container">
             <h2 class="section-title section__title">Отзывы наших клиентов</h2>
@@ -432,7 +476,7 @@
     <section class="offer">
         <div class="container">
             <div class="offer__block offer-block offer-block__price-bg">
-                <h2 class="offer__title">Ищите где дешевле и лучше?</h2>
+                <h2 class="offer__title">Ищете где дешевле и лучше?</h2>
                 <span class="offer__subtitle">Если у Вас уже есть расчет от другой фирмы, но Вы хотите цену дешевле, укажите ее - и мы вам пересчитаем заказ с максимальной скидкой</span>
                 <form action="#" class="form offer__form">
                     <div class="form__row">
@@ -440,7 +484,7 @@
                             <input type="text" class="input form__input" placeholder="Ваше имя">
                         </div>
                         <div class="form__group">
-                            <input type="text" class="input form__input" placeholder="Ваш телефон">
+                            <input type="tel" class="input form__input" placeholder="Ваш телефон">
                         </div>
                         <div class="form__group">
                             <input type="text" class="input form__input" placeholder="Ваша цена">
@@ -548,5 +592,12 @@
 
 <!-- Подключение виджета обратной связи через соцсети -->
 <script type="text/javascript" src="https://spikmi.com/Widget?Id=2199"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="js/jquery.event.move.js"></script>
+<script src="js/jquery.twentytwenty.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
+
 </body>
 </html>
